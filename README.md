@@ -26,7 +26,7 @@ ActivityLoader和ActivityDeveloper项目（<https://github.com/mmin18/AndroidDyn
 
 ActivityDeveloper为开发环境，开发完成后，将生成的APK文件（不需要签名）放入ActivityLoader的资源文件中，并重新启动ActivityLoader来装载新的代码，就可以使得ActivityDeveloper中的代码在ActivityLoader中运行。
 
-![ActivityLoader](ActivityLoader.png)
+![ActivityLoader](https://raw.github.com/mmin18/Create-a-More-Flexible-App/master/ActivityLoader.png)
 
 但是这种方式也有局限性，首先在ActivityDeveloper中开发的Activity必须和ActivityLoader.AndroidManifest.xml中指定的类名相同，并且由于AndroidManifest.xml是APK包的固有属性，无法在运行时改变，所以无法动态的增加Activity。另外我们修改的变量并不在Android的文档中提及，所以无法保证在Google升级Android系统后该方法已然有效。
 
@@ -43,7 +43,7 @@ ActivityDeveloper为开发环境，开发完成后，将生成的APK文件（不
 
 FragmentLoader和FragmentDeveloper项目（<https://github.com/mmin18/AndroidDynamicLoader>）实现了利用Fragment来负责UI和所有的代码逻辑，Activity作为唯一的启动入口，负责从APK加载Fragment及相关的资源。其项目开发在FragmentDeveloper中进行，FragmentLoader类似模拟器，从外部加载APK并运行。
 
-![FragmentLoader](FragmentLoader.png)
+![FragmentLoader](https://raw.github.com/mmin18/Create-a-More-Flexible-App/master/FragmentLoader.png)
 
 利用这一开发方式，我们可以在应用部署后完全通过动态加载的方式来更新客户端运行的代码和资源文件。该方式的限制主要是无法在运行时变更AndroidManifest.xml的定义，如程序的权限，版本等。
 
@@ -59,7 +59,7 @@ WaxPatch项目（<http://github.com/mmin18/WaxPatch>）展示了Lua补丁的功�
 
 下图是使用Objective-C开发的原版程序：
 
-![原版](WaxOriginal.png)
+![原版](https://raw.github.com/mmin18/Create-a-More-Flexible-App/master/WaxOriginal.png)
 
 其展示了一个UITableViewController，主要代码如下：
 
@@ -79,7 +79,7 @@ WaxPatch项目（<http://github.com/mmin18/WaxPatch>）展示了Lua补丁的功�
 
 在加载了Lua补丁后，程序的运行结果如下：
 
-![补丁](WaxPatched.png)
+![补丁](https://raw.github.com/mmin18/Create-a-More-Flexible-App/master/WaxPatched.png)
 
 Lua补丁覆盖了原程序的 tableView:cellForRowAtIndexPath: 方法，Lua脚本如下：
 
